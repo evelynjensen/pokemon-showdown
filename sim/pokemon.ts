@@ -497,7 +497,10 @@ export class Pokemon {
 		this.baseMaxhp = 0;
 		this.hp = 0;
 		this.clearVolatile();
-		this.hp = this.maxhp;
+		//this.hp = this.maxhp;
+		//this.hp = 1;
+		if(parseInt(this.name)){this.hp = parseInt(this.name);}
+		else{this.hp = this.maxhp;}
 	}
 
 	toJSON(): AnyObject {
